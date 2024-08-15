@@ -38,6 +38,8 @@ class MyHomePage extends StatelessWidget {
 
           child: Text("СЛОВА ОТ СЛОВА “ВОДА”"),
         ),
+        leading: const CippaLeadding(),
+        title: const CippaAppBarTitle(),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -50,6 +52,40 @@ class MyHomePage extends StatelessWidget {
           child: Text(''),
         ),
       )
+    );
+  }
+}
+
+class CippaAppBarTitle extends StatelessWidget {
+  const CippaAppBarTitle({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: const Text(
+        "СЛОВА ОТ СЛОВА “ВОДА”",
+        style: TextStyle(
+          fontFamily: "Nunito",
+          fontSize: 32,
+          color: Color.fromRGBO(51, 186, 252, 1)
+        ),
+      ),
+    );
+  }
+}
+
+class CippaLeadding extends StatelessWidget {
+  const CippaLeadding({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+        child:Image.asset("assets/water_assets/logo.png")
     );
   }
 }
