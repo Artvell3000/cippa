@@ -30,14 +30,6 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
-            child:Image.asset("assets/water_assets/logo.png")
-        ),
-        title: Container(
-
-          child: Text("СЛОВА ОТ СЛОВА “ВОДА”"),
-        ),
         leading: const CippaLeadding(),
         title: const CippaAppBarTitle(),
       ),
