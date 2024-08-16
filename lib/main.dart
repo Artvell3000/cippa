@@ -1,9 +1,13 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 import 'AppBarComponents/leading.dart';
 import 'AppBarComponents/title.dart';
 import 'Assets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'VariantButton.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -70,9 +74,11 @@ class waterBody extends StatelessWidget {
                   Assets.cippaTells
               ),
             ),
-            Positioned(
-              child: Image.asset(
-                  Assets.potImg
+            const Positioned(
+              child: VariantButton(
+                  imgPath: Assets.potImg,
+                padding: EdgeInsets.only(top:10, bottom: 40, left: 30, right: 30),
+                onPressed: null,
               ),
             ),
           ],
