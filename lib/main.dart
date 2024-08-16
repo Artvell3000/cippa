@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'AppBarComponents/leading.dart';
+import 'AppBarComponents/title.dart';
 import 'Assets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 void main() {
@@ -75,38 +77,6 @@ class waterBody extends StatelessWidget {
             ),
           ],
         ),
-    );
-  }
-}
-
-class CippaAppBarTitle extends StatelessWidget {
-  const CippaAppBarTitle({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Text(
-      Assets.waterAppBarText,
-      style: TextStyle(
-        fontFamily: Assets.waterAppBarFont,
-        fontSize: 32,
-        color: Assets.waterAppBarTextColor
-      ),
-    );
-  }
-}
-
-class CippaLeadding extends StatelessWidget {
-  const CippaLeadding({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
-        child: Image.asset(Assets.cippaLogo)
     );
   }
 }
