@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class Assets{
   static const waterBackground = 'assets/water_assets/background.png';
   static const cippaLogo = "assets/water_assets/logo.png";
@@ -10,5 +12,7 @@ class Assets{
   static const waterAppBarText = "СЛОВА ОТ СЛОВА “ВОДА”";
   static const waterAppBarFont = "Nunito";
 
-  static const Color waterAppBarTextColor = Color.fromRGBO(51, 186, 252, 1);
+  static const waterAppBarTextColor = Color.fromRGBO(51, 186, 252, 1);
+  static const shadowTextButtonColor = Color.fromRGBO(51, 186, 252, 1);
+  static const backColorVariantButton = Colors.white;
 }
