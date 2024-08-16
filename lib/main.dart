@@ -9,11 +9,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'VariantButton.dart';
 void main() {
-  runApp(const MyApp());
+  runApp(const CippaWaterView());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CippaWaterView extends StatelessWidget {
+  const CippaWaterView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -74,12 +74,27 @@ class waterBody extends StatelessWidget {
                   Assets.cippaTells
               ),
             ),
-            const Positioned(
-              child: VariantButton(
-                  imgPath: Assets.potImg,
-                padding: EdgeInsets.only(top:10, bottom: 40, left: 30, right: 30),
-                onPressed: null,
-              ),
+            const Align(
+              alignment: Alignment.topRight,
+              child: Column(
+                //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children:[
+                    SizedBox(height: 25,),
+                    Expanded(child: VariantButton(
+                      imgPath: Assets.potImg,
+                      padding: EdgeInsets.only(top:0, bottom: 20, left: 10, right: 10),
+                      onPressed: null,
+                      )
+                    ),
+                    SizedBox(height: 25,),
+                    Expanded(child: VariantButton(
+                      imgPath: Assets.potImg,
+                      padding: EdgeInsets.only(top:0, bottom: 20, left: 10, right: 10),
+                      onPressed: null,
+                    )),
+                    SizedBox(height: 25,),
+                ]
+              )
             ),
           ],
         ),
