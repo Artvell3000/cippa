@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Assets.dart';
-//import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -35,24 +35,51 @@ class MyHomePage extends StatelessWidget {
         leading: const CippaLeadding(),
         title: const CippaAppBarTitle(),
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(Assets.waterBackground),
-            fit: BoxFit.cover,
-          ),
+      body: waterBody()
+    );
+  }
+}
+
+class waterBody extends StatelessWidget {
+  const waterBody({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(Assets.waterBackground),
+          fit: BoxFit.cover,
         ),
-        child:const Center(
-          child: Text(''),
+      ),
+      child: Stack(
+          children: [
+            Positioned(
+                child: Image.asset(
+                    Assets.cippasMessage
+                ),
+            ),
+            Positioned(
+              child: Image.asset(
+                  Assets.cippaTells
+              ),
+            ),
+            Positioned(
+              child: Image.asset(
+                  Assets.potImg
+              ),
+            ),
+          ],
         ),
-      )
     );
   }
 }
 
 class CippaAppBarTitle extends StatelessWidget {
-  static const String _waterAppBarText = "СЛОВА ОТ СЛОВА “ВОДА”";
-  static const String _waterAppBarFont = "Nunito";
   const CippaAppBarTitle({
     super.key,
   });
@@ -60,11 +87,11 @@ class CippaAppBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text(
-      _waterAppBarText,
+      Assets.waterAppBarText,
       style: TextStyle(
-        fontFamily: _waterAppBarFont,
+        fontFamily: Assets.waterAppBarFont,
         fontSize: 32,
-        color: Color.fromRGBO(51, 186, 252, 1)
+        color: Assets.waterAppBarTextColor
       ),
     );
   }
@@ -79,7 +106,7 @@ class CippaLeadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
-        child:Image.asset(Assets.cippaLogo)
+        child: Image.asset(Assets.cippaLogo)
     );
   }
 }
