@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        leading: const CippaLeadding(),
+        leading: const CippaAppBarLeadding(),
         title: const CippaAppBarTitle(),
       ),
       body: waterBody()

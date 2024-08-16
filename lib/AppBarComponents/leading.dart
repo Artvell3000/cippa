@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 
 import '../Assets.dart';
 
-class CippaLeadding extends StatelessWidget {
-  const CippaLeadding({
+class CippaAppBarLeadding extends StatelessWidget {
+  const CippaAppBarLeadding({
     super.key,
   });
 
