@@ -1,12 +1,10 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 import 'AppBarComponents/leading.dart';
 import 'AppBarComponents/title.dart';
 import 'Assets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
+import 'CippaTellWidget.dart';
 import 'VariantButton.dart';
 void main() {
   runApp(const CippaWaterView());
@@ -41,13 +39,13 @@ class MyHomePage extends StatelessWidget {
         leading: const CippaAppBarLeadding(),
         title: const CippaAppBarTitle(),
       ),
-      body: waterBody()
+      body: const WaterBody()
     );
   }
 }
 
-class waterBody extends StatelessWidget {
-  const waterBody({
+class WaterBody extends StatelessWidget {
+  const WaterBody({
     super.key,
   });
 
@@ -62,42 +60,76 @@ class waterBody extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: Stack(
-          children: [
-            Positioned(
-                child: Image.asset(
-                    Assets.cippasMessage
-                ),
-            ),
-            Positioned(
-              child: Image.asset(
-                  Assets.cippaTells
-              ),
-            ),
-            const Align(
-              alignment: Alignment.topRight,
-              child: Column(
-                //mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children:[
-                    SizedBox(height: 25,),
-                    Expanded(child: VariantButton(
-                      imgPath: Assets.potImg,
-                      padding: EdgeInsets.only(top:0, bottom: 20, left: 10, right: 10),
-                      onPressed: null,
-                      )
-                    ),
-                    SizedBox(height: 25,),
-                    Expanded(child: VariantButton(
-                      imgPath: Assets.potImg,
-                      padding: EdgeInsets.only(top:0, bottom: 20, left: 10, right: 10),
-                      onPressed: null,
-                    )),
-                    SizedBox(height: 25,),
-                ]
-              )
-            ),
-          ],
-        ),
+      child: Row(
+        children: [
+          Expanded(
+            flex: 169,
+              child: SizedBox()
+          ),
+          Expanded(
+              flex: 637,
+              child: CippaTellWidget()
+          ),
+          Expanded(
+              flex: 661,
+              child: SizedBox()
+          ),
+          Expanded(
+              flex: 321,
+              child: VariantColumn()
+          ),
+          Expanded(
+              flex: 132,
+              child: SizedBox()
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class VariantColumn extends StatelessWidget {
+  const VariantColumn({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      //mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children:[
+        const Expanded(
+          flex:110,
+          child: SizedBox()
+          ),
+          Expanded(
+            flex:318,
+            child: VariantButton(
+            imgPath: Assets.potImg,
+            padding: const EdgeInsets.only(top:0, bottom: 15, left: 10, right: 10),
+            onPressed: (){
+              print("click1");
+            },
+            )
+          ),
+          const Expanded(
+            flex:76,
+            child: SizedBox()
+          ),
+          Expanded(
+            flex:318,
+            child: VariantButton(
+            imgPath: Assets.potImg,
+            padding: const EdgeInsets.only(top:0, bottom: 15, left: 10, right: 10),
+            onPressed: (){
+              print("click2");
+              },
+          )),
+          const Expanded(
+              flex:131,
+              child: SizedBox()
+          ),
+      ]
     );
   }
 }
