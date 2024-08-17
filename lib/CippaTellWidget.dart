@@ -9,15 +9,40 @@ class CippaTellWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Row(
       children: [
-        Card(
-          child: Padding(
-            padding: EdgeInsets.all(10),
-            child: Text("1"),
-          ),
+        Expanded(
+          flex:111,
+            child: SizedBox()
         ),
-        Image.asset(Assets.cippaTells)
+        Expanded(
+            flex: 842,
+            child: Stack(children: [
+              Column(
+                children: [
+                  Expanded(
+                      flex:403,
+                      child: Image.asset(Assets.cippasMessage)
+                  ),
+                  Expanded(
+                      flex:439,
+                      child: SizedBox()
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Expanded(
+                      flex:296,
+                      child: SizedBox()
+                  ),
+                  Expanded(
+                      flex:547,
+                      child: Image.asset(Assets.cippaTells)
+                  )
+                ],
+              )
+            ],))
       ],
     );
   }
