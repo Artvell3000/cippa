@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'water_assets.dart';
+import '../water_assets.dart';
+import 'MessageBlocBuilder.dart';
 
 class CippaTellWidget extends StatelessWidget {
   const CippaTellWidget({
@@ -36,12 +37,12 @@ class CippaTellWidget extends StatelessWidget {
                                       width: 170,
                                       height: 30,
                                       child: Center(
-                                        child: Text("hi"),
+                                        child: MessageBlocBuilder(),
                                       ))
                                     )
                                     )
                                 ,
-                                const Expanded(
+                                Expanded(
                                     flex: 172,
                                     child: SizedBox()
                                 )

@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:water_cippa/TheoryWidget.dart';
-import 'package:water_cippa/variants.dart';
+import 'package:water_cippa/Theory/TheoryWidget.dart';
+import 'package:water_cippa/Question/info_for_variant_button.dart';
 
 import 'AppBarComponents/leading.dart';
 import 'AppBarComponents/title.dart';
-import 'QuestionWidget.dart';
+import 'Question/QuestionWidget.dart';
 import 'water_assets.dart';
 
-import 'CippaTellWidget.dart';
+import 'CippaTells/CippaTellWidget.dart';
 void main() {
   runApp(const CippaWaterView());
 }
@@ -81,7 +81,7 @@ class WaterBody extends StatelessWidget {
 
                   }),
                   PotInfoForVariantButton((context){
-                    
+
                   })
                 ],
               )

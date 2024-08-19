@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:water_cippa/variants.dart';
+import 'package:water_cippa/Question/info_for_variant_button.dart';
 
 import 'VariantButton.dart';
 

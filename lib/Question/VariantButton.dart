@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:water_cippa/variants.dart';
+import 'package:water_cippa/Question/info_for_variant_button.dart';
 
-import 'water_assets.dart';
+import '../water_assets.dart';
 
 class VariantButton extends StatelessWidget {
   final CircleBorder shape = const CircleBorder(
       side: BorderSide(
-          color: Assets.shadowTextButtonColor,
+          color: Assets.variantButtonShadowColor,
           width: 7
       )
   );
@@ -24,7 +24,7 @@ class VariantButton extends StatelessWidget {
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
           boxShadow:  [BoxShadow(
-            color: Assets.shadowTextButtonColor,
+            color: Assets.variantButtonShadowColor,
             spreadRadius: 3,
             blurRadius: 10,
             offset: Offset(0, 3),
@@ -36,8 +36,8 @@ class VariantButton extends StatelessWidget {
       },
       style: TextButton.styleFrom(
           alignment: Alignment.center,
-          backgroundColor: Assets.backColorVariantButton,
-          shadowColor: Assets.shadowTextButtonColor,
+          backgroundColor: Assets.variantButtonBackColor,
+          shadowColor: Assets.variantButtonShadowColor,
           shape: shape
       ),
       child:Padding(

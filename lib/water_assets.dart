@@ -19,9 +19,9 @@ class Assets{
 
 
   static const appBarTextColor = Color.fromRGBO(51, 186, 252, 1);
-  static const shadowTextButtonColor = Color.fromRGBO(51, 186, 252, 1);
+  static const variantButtonShadowColor = Color.fromRGBO(51, 186, 252, 1);
   static const theoryCardShadowColor = Color.fromRGBO(48, 128, 171, 100);
-  static const backColorVariantButton = Colors.white;
+  static const variantButtonBackColor = Colors.white;
 
   static const theoryWord1 = "ВОДИЧКА";
   static const theoryWord2 = "ВОДЯНОЙ";
