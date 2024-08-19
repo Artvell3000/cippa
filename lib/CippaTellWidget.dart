@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Assets.dart';
+import 'water_assets.dart';
 
 class CippaTellWidget extends StatelessWidget {
   const CippaTellWidget({
@@ -26,7 +26,7 @@ class CippaTellWidget extends StatelessWidget {
                       child:Stack(
                         fit: StackFit.loose,
                           children: [
-                            Image.asset(Assets.cippasMessage),
+                            Image.asset(Assets.cippasMessagePng),
                             const Column(
                               children: [
                                 Expanded(
@@ -65,7 +65,7 @@ class CippaTellWidget extends StatelessWidget {
                   ),
                   Expanded(
                       flex:547,
-                      child: Image.asset(Assets.cippaTells)
+                      child: Image.asset(Assets.cippaTellsPng)
                   )
                 ],
               )

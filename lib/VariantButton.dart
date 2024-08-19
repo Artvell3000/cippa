@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Assets.dart';
+import 'water_assets.dart';
 
 class VariantButton extends StatelessWidget {
   final String imgPath;

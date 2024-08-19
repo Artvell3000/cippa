@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import 'Assets.dart';
+import 'water_assets.dart';
 import 'VariantButton.dart';
 
 class VariantColumn extends StatelessWidget {

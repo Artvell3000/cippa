@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'AppBarComponents/leading.dart';
 import 'AppBarComponents/title.dart';
-import 'Assets.dart';
+import 'water_assets.dart';
 
 import 'CippaTellWidget.dart';
 import 'VariantColumn.dart';
@@ -56,7 +56,7 @@ class WaterBody extends StatelessWidget {
       height: double.infinity,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(Assets.waterBackground),
+          image: AssetImage(Assets.waterBackgroundPng),
           fit: BoxFit.cover,
         ),
       ),

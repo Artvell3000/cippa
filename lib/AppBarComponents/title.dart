@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import '../Assets.dart';
+import '../water_assets.dart';
 
 class CippaAppBarTitle extends StatelessWidget {
   const CippaAppBarTitle({
@@ -10,11 +10,11 @@ class CippaAppBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text(
-      Assets.waterAppBarText,
+      Assets.appBarText,
       style: TextStyle(
-          fontFamily: Assets.waterAppBarFont,
+          fontFamily: Assets.appBarFont,
           fontSize: 32,
-          color: Assets.waterAppBarTextColor
+          color: Assets.appBarTextColor
       ),
     );
   }
