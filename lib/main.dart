@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'AppBarComponents/leading.dart';
 import 'AppBarComponents/title.dart';
+import 'QuestionWidget.dart';
 import 'water_assets.dart';
 
 import 'CippaTellWidget.dart';
-import 'VariantColumn.dart';
 void main() {
   runApp(const CippaWaterView());
 }
@@ -60,7 +60,7 @@ class WaterBody extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: Row(
+      child: const Row(
         children: [
           Expanded(
             flex: 169,
@@ -71,22 +71,15 @@ class WaterBody extends StatelessWidget {
               child: CippaTellWidget()
           ),
           Expanded(
-              flex: 661,
-              child: SizedBox()
-          ),
-          Expanded(
-              flex: 321,
-              child: VariantColumn()
-          ),
-          Expanded(
-              flex: 132,
-              child: SizedBox()
+              flex: 1114,
+              child: QuestionWidget()
           ),
         ],
       ),
     );
   }
 }
+
 
 
 
