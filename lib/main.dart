@@ -1,14 +1,11 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:water_cippa/Theory/TheoryWidget.dart';
-import 'package:water_cippa/Question/info_for_variant_button.dart';
 import 'package:water_cippa/bloc/water_bloc.dart';
 
+import 'ActivityBuilder.dart';
 import 'AppBarComponents/leading.dart';
 import 'AppBarComponents/title.dart';
-import 'Question/QuestionWidget.dart';
 import 'water_assets.dart';
 
 import 'CippaTells/CippaTellWidget.dart';
@@ -62,7 +59,10 @@ class WaterGestureDetector extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Provider.of<WaterBloc>(context, listen: false).add(GoToNextIteration());
+        final bloc  = Provider.of<WaterBloc>(context, listen: false);
+        if((bloc.state as IterationState).iter.skipable){
+          bloc.add(GoToNextIteration());
+        }
       },
         child: const WaterBody()
     );
@@ -85,28 +85,19 @@ class WaterBody extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: Row(
+      child: const Row(
         children: [
-          const Expanded(
+          Expanded(
             flex: 169,
               child: SizedBox()
           ),
-          const Expanded(
+          Expanded(
               flex: 637,
               child: CippaTellWidget()
           ),
           Expanded(
               flex: 1114,
-              child: QuestionWidget(
-                variants: [
-                  PotInfoForVariantButton((context){
-
-                  }),
-                  PotInfoForVariantButton((context){
-
-                  })
-                ],
-              )
+              child: ActivityBuilder()
           ),
         ],
       ),

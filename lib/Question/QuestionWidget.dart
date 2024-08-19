@@ -1,25 +1,23 @@
 import 'package:flutter/cupertino.dart';
-import 'package:water_cippa/Question/info_for_variant_button.dart';
 
 import 'VariantColumn.dart';
 
 class QuestionWidget extends StatelessWidget {
-  final List<InfoForVariantButton> variants;
-  const QuestionWidget({super.key, required this.variants});
+  const QuestionWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
-        const Expanded(
+        Expanded(
             flex: 661,
             child: SizedBox()
         ),
         Expanded(
             flex: 321,
-            child: VariantColumn(variants: variants,)
+            child: VariantColumn()
         ),
-        const Expanded(
+        Expanded(
             flex: 132,
             child: SizedBox()
         ),

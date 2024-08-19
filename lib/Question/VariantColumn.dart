@@ -1,39 +1,31 @@
 import 'package:flutter/cupertino.dart';
-import 'package:water_cippa/Question/info_for_variant_button.dart';
-
-import 'VariantButton.dart';
+import 'VariantBuilder.dart';
 
 class VariantColumn extends StatelessWidget {
-  final List<InfoForVariantButton> variants;
 
-  const VariantColumn({
-    super.key, required this.variants,
-  });
+  const VariantColumn({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
         children:[
-          const Expanded(
+          Expanded(
               flex:110,
               child: SizedBox()
           ),
           Expanded(
               flex:318,
-              child: VariantButton(
-                variant: variants.elementAt(0),
-              )
+              child: VariantButtonBuilder(first: true,)
           ),
-          const Expanded(
+          Expanded(
               flex:76,
               child: SizedBox()
           ),
           Expanded(
               flex:318,
-              child: VariantButton(
-                variant: variants.elementAt(1),
-              )),
-          const Expanded(
+              child: VariantButtonBuilder(first: false,)
+          ),
+          Expanded(
               flex:131,
               child: SizedBox()
           ),
