@@ -7,7 +7,7 @@ class VariantButton extends StatelessWidget {
   final CircleBorder shape = const CircleBorder(
       side: BorderSide(
           color: Assets.shadowTextButtonColor,
-          width: 5
+          width: 7
       )
   );
 
