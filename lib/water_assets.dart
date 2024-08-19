@@ -17,7 +17,6 @@ class Assets{
   static const appBarFont = "Nunito";
   static const theoryCardFont = "NunitoRegular";
 
-
   static const appBarTextColor = Color.fromRGBO(51, 186, 252, 1);
   static const variantButtonShadowColor = Color.fromRGBO(51, 186, 252, 1);
   static const theoryCardShadowColor = Color.fromRGBO(48, 128, 171, 100);
