@@ -1,8 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 import 'package:water_cippa/Theory/TheoryWidget.dart';
 import 'package:water_cippa/Question/info_for_variant_button.dart';
+import 'package:water_cippa/bloc/water_bloc.dart';
 
 import 'AppBarComponents/leading.dart';
 import 'AppBarComponents/title.dart';
@@ -43,7 +45,26 @@ class MyHomePage extends StatelessWidget {
         leading: const CippaAppBarLeadding(),
         title: const CippaAppBarTitle(),
       ),
-      body: const WaterBody()
+      body: BlocProvider(
+        create: (BuildContext context) => WaterBloc(),
+        child: const WaterGestureDetector(),
+      )
+    );
+  }
+}
+
+class WaterGestureDetector extends StatelessWidget {
+  const WaterGestureDetector({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: (){
+        Provider.of<WaterBloc>(context, listen: false).add(GoToNextIteration());
+      },
+        child: const WaterBody()
     );
   }
 }

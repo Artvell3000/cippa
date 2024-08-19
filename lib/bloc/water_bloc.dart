@@ -1,13 +1,18 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
+import 'activity.dart';
+
 part 'water_event.dart';
 part 'water_state.dart';
 
-class WaterBloc extends Bloc<WaterEvent, WaterState> {
-  WaterBloc() : super(WaterInitial()) {
-    on<WaterEvent>((event, emit) {
-      // TODO: implement event handler
+final Activity _activity = Activity();
+
+class WaterBloc extends Bloc<Event, WaterState> {
+
+  WaterBloc() : super(IterationState(_activity.getCurrentIteration())) {
+    on<GoToNextIteration>((event, emit) {
+      emit(IterationState(_activity.toNextIteration()));
     });
   }
 }
