@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water_cippa/TheoryWidget.dart';
 
 import 'AppBarComponents/leading.dart';
 import 'AppBarComponents/title.dart';
@@ -72,7 +73,7 @@ class WaterBody extends StatelessWidget {
           ),
           Expanded(
               flex: 1114,
-              child: QuestionWidget()
+              child: TheoryWidget()
           ),
         ],
       ),

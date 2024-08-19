@@ -13,9 +13,20 @@ class Assets{
   static const bathImgPng = "assets/water_assets/bath.png";
 
   static const appBarText = "СЛОВА ОТ СЛОВА “ВОДА”";
+
   static const appBarFont = "Nunito";
+  static const theoryCardFont = "NunitoRegular";
+
 
   static const appBarTextColor = Color.fromRGBO(51, 186, 252, 1);
   static const shadowTextButtonColor = Color.fromRGBO(51, 186, 252, 1);
+  static const theoryCardShadowColor = Color.fromRGBO(48, 128, 171, 100);
   static const backColorVariantButton = Colors.white;
+
+  static const theoryWord1 = "ВОДИЧКА";
+  static const theoryWord2 = "ВОДЯНОЙ";
+  static const theoryWord3 = "НАВОДНИТЬ";
+  static const theoryWord4 = "ВОДЯНОЙ";
+  static const theoryWord5 = "ВОДЯНКА";
+  static const theoryWord6 = "БЕЗВОДНЫЙ";
 }
