@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:water_cippa/variants.dart';
 
 import 'water_assets.dart';
 import 'VariantButton.dart';
@@ -20,8 +21,7 @@ class VariantColumn extends StatelessWidget {
           Expanded(
               flex:318,
               child: VariantButton(
-                imgPath: Assets.potImg,
-                padding: const EdgeInsets.only(top:0, bottom: 15, left: 10, right: 10),
+                variant: PotVariant(),
                 onPressed: (){
                   print("click1");
                 },
@@ -34,8 +34,7 @@ class VariantColumn extends StatelessWidget {
           Expanded(
               flex:318,
               child: VariantButton(
-                imgPath: Assets.potImg,
-                padding: const EdgeInsets.only(top:0, bottom: 15, left: 10, right: 10),
+                variant: PotVariant(),
                 onPressed: (){
                   print("click2");
                 },

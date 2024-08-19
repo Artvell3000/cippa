@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:water_cippa/variants.dart';
 
 import 'water_assets.dart';
 
 class VariantButton extends StatelessWidget {
-  final String imgPath;
-  final EdgeInsetsGeometry padding;
   final CircleBorder shape = const CircleBorder(
       side: BorderSide(
           color: Assets.shadowTextButtonColor,
@@ -13,12 +11,12 @@ class VariantButton extends StatelessWidget {
       )
   );
 
+  final Variant variant;
   final void Function()? onPressed;
 
   const VariantButton({
     super.key,
-    required this.imgPath,
-    required this.padding,
+    required this.variant,
     required this.onPressed
   });
 
@@ -43,10 +41,10 @@ class VariantButton extends StatelessWidget {
           shape: shape
       ),
       child:Padding(
-          padding: padding,
+          padding: variant.padding,
           child:Image.asset(
-            imgPath,
-            fit: BoxFit.scaleDown
+            variant.imgPath,
+            fit: variant.fit
           )
       ),
     ));
