@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:water_cippa/variants.dart';
 
-import 'water_assets.dart';
 import 'VariantButton.dart';
 
 class VariantColumn extends StatelessWidget {
+  final List<InfoForVariantButton> variants;
+
   const VariantColumn({
-    super.key,
+    super.key, required this.variants,
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      //mainAxisAlignment: MainAxisAlignment.spaceAround,
         children:[
           const Expanded(
               flex:110,
@@ -21,10 +21,7 @@ class VariantColumn extends StatelessWidget {
           Expanded(
               flex:318,
               child: VariantButton(
-                variant: PotVariant(),
-                onPressed: (){
-                  print("click1");
-                },
+                variant: variants.elementAt(0),
               )
           ),
           const Expanded(
@@ -34,10 +31,7 @@ class VariantColumn extends StatelessWidget {
           Expanded(
               flex:318,
               child: VariantButton(
-                variant: PotVariant(),
-                onPressed: (){
-                  print("click2");
-                },
+                variant: variants.elementAt(1),
               )),
           const Expanded(
               flex:131,

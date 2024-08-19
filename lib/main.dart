@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:water_cippa/TheoryWidget.dart';
+import 'package:water_cippa/variants.dart';
 
 import 'AppBarComponents/leading.dart';
 import 'AppBarComponents/title.dart';
@@ -61,19 +63,28 @@ class WaterBody extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: const Row(
+      child: Row(
         children: [
-          Expanded(
+          const Expanded(
             flex: 169,
               child: SizedBox()
           ),
-          Expanded(
+          const Expanded(
               flex: 637,
               child: CippaTellWidget()
           ),
           Expanded(
               flex: 1114,
-              child: TheoryWidget()
+              child: QuestionWidget(
+                variants: [
+                  PotInfoForVariantButton((context){
+
+                  }),
+                  PotInfoForVariantButton((context){
+                    
+                  })
+                ],
+              )
           ),
         ],
       ),

@@ -1,13 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:water_cippa/water_assets.dart';
 
-abstract class Variant{
+abstract class InfoForVariantButton{
   abstract String imgPath;
   abstract EdgeInsetsGeometry padding;
   abstract BoxFit fit;
+  late void Function(BuildContext context) onPressed;
+
+  InfoForVariantButton(this.onPressed);
 }
 
-class PotVariant extends Variant{
+class PotInfoForVariantButton extends InfoForVariantButton{
   @override
   String imgPath = Assets.potImgPng;
 
@@ -16,4 +19,6 @@ class PotVariant extends Variant{
 
   @override
   BoxFit fit = BoxFit.scaleDown;
+
+  PotInfoForVariantButton(super.onPressed);
 }

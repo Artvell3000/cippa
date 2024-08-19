@@ -11,13 +11,11 @@ class VariantButton extends StatelessWidget {
       )
   );
 
-  final Variant variant;
-  final void Function()? onPressed;
+  final InfoForVariantButton variant;
 
   const VariantButton({
     super.key,
     required this.variant,
-    required this.onPressed
   });
 
   @override
@@ -33,7 +31,9 @@ class VariantButton extends StatelessWidget {
           )],
         ),
         child: TextButton(
-      onPressed: onPressed,
+      onPressed: (){
+        variant.onPressed(context);
+      },
       style: TextButton.styleFrom(
           alignment: Alignment.center,
           backgroundColor: Assets.backColorVariantButton,
