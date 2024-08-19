@@ -14,5 +14,12 @@ class WaterBloc extends Bloc<Event, WaterState> {
     on<GoToNextIteration>((event, emit) {
       emit(IterationState(_activity.toNextIteration()));
     });
+    on<WrongAnswer>((event, emit) {
+      final Iteration iter = Iteration(
+          skipable: false,
+          newText: "Неверно, попробуй снова"
+      );
+      emit(IterationState(iter));
+    });
   }
 }

@@ -4,3 +4,4 @@ part of 'water_bloc.dart';
 sealed class Event {}
 
 final class GoToNextIteration extends Event{}
+final class WrongAnswer extends Event{}
