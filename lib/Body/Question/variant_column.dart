@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'VariantBuilder.dart';
+import 'variant_builder.dart';
 
 class VariantColumn extends StatelessWidget {
 

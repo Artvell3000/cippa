@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import 'VariantColumn.dart';
+import 'variant_column.dart';
 
 class QuestionWidget extends StatelessWidget {
   const QuestionWidget({super.key});

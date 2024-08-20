@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'bloc/activity.dart';
-import 'bloc/water_bloc.dart';
+import '../bloc/activity.dart';
+import '../bloc/water_bloc.dart';
 
-class ActivityBuilder extends StatelessWidget {
-  const ActivityBuilder({
+class BodyBuilder extends StatelessWidget {
+  const BodyBuilder({
     super.key,
   });
 

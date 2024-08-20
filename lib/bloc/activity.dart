@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:water_cippa/bloc/IterationsBuilder.dart';
-part 'iterations.dart';
+import 'package:water_cippa/bloc/iterations_builder.dart';
+part 'iteration.dart';
 
 class Activity {
   int current = 0;

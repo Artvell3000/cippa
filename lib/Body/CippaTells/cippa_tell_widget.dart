@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../water_assets.dart';
-import 'MessageBlocBuilder.dart';
+import '../../water_assets.dart';
+import 'message_builder.dart';
 
 class CippaTellWidget extends StatelessWidget {
   const CippaTellWidget({

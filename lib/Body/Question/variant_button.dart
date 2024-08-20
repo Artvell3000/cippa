@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:water_cippa/Question/info_for_variant_button.dart';
 
-import '../water_assets.dart';
+import '../../water_assets.dart';
+import 'info_for_variant_button.dart';
+
 
 class VariantButton extends StatelessWidget {
   final CircleBorder shape = const CircleBorder(

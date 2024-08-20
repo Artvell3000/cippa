@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../bloc/water_bloc.dart';
+import '../../bloc/water_bloc.dart';
+
 
 class VariantButtonBuilder extends StatelessWidget {
   final bool first;

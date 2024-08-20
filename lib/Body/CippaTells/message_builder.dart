@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:water_cippa/bloc/water_bloc.dart';
 
-import '../bloc/activity.dart';
+import '../../bloc/activity.dart';
 
 class MessageBlocBuilder extends StatelessWidget {
   const MessageBlocBuilder({

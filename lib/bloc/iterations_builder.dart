@@ -2,10 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 import 'package:water_cippa/bloc/water_bloc.dart';
 
-import '../Question/QuestionWidget.dart';
-import '../Question/VariantButton.dart';
-import '../Question/info_for_variant_button.dart';
-import '../Theory/TheoryWidget.dart';
+
+import '../Body/Question/info_for_variant_button.dart';
+import '../Body/Question/question_widget.dart';
+import '../Body/Question/variant_button.dart';
+import '../Body/Theory/theory_widget.dart';
 import 'activity.dart';
 
 class IterationsBuilder{
@@ -17,10 +18,12 @@ class IterationsBuilder{
     Provider.of<WaterBloc>(context, listen: false).add(WrongAnswer());
   }
 
-  late List<Iteration> iterations;
+  late List<Iteration> _iterations;
+
+  List<Iteration> get iterations{ return _iterations;}
 
   IterationsBuilder(){
-    iterations = [
+    _iterations = [
       Iteration(
           newText: "Привет, ребята! А вы знали, что....",
           newActiveZone: const SizedBox()
