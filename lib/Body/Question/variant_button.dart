@@ -31,6 +31,7 @@ class VariantButton extends StatelessWidget {
             offset: Offset(0, 3),
           )],
         ),
+        clipBehavior: Clip.hardEdge,
         child: TextButton(
       onPressed: (){
         variant.onPressed(context);
@@ -41,13 +42,7 @@ class VariantButton extends StatelessWidget {
           shadowColor: Assets.variantButtonShadowColor,
           shape: shape
       ),
-      child:Padding(
-          padding: variant.padding,
-          child:Image.asset(
-            variant.imgPath,
-            fit: variant.fit
-          )
-      ),
+      child: variant.getImageWidget(),
     ));
   }
 }
