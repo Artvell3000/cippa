@@ -59,12 +59,11 @@ class IterationsBuilder{
           newText: "Правильно, в ванну!",
           newButton1: const SizedBox()
       ),
-      Iteration(newText: "Где больше воды, в море или в ложке?"),
-      Iteration(newText: "Верно, в море!"),
-      Iteration(newText: "Где больше воды, в чашке или реке?"),
-      Iteration(newText: "Правильно, в реке!"),
-      Iteration(newText: "Где больше воды, в ванне или в море?"),
-      Iteration(newText: "Конечно же в море!"),
+      //Iteration(newText: "Где больше воды, в море или в ложке?"),
+      //Iteration(newText: "Верно, в море!"),
+      //Iteration(newText: "Где больше воды, в чашке или реке?"),
+      //Iteration(newText: "Правильно, в реке!"),
+      //Iteration(newText: "Где больше воды, в ванне или в море?"),
       Iteration(
           newText: "Ребята, вы молодцы! До новых встреч!",
           newActiveZone: const SizedBox()
