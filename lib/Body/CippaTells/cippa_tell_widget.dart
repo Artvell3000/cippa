@@ -34,8 +34,8 @@ class CippaTellWidget extends StatelessWidget {
                                     flex:231,
                                     child: Padding(padding: EdgeInsets.only(left: 10, top: 5),
                                     child: SizedBox(
-                                      width: 170,
-                                      height: 30,
+                                      width: 380,
+                                      height: 60,
                                       child: Center(
                                         child: MessageBlocBuilder(),
                                       ))
